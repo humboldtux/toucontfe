@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>TouCont'Fé | La Troupe</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="TouCont'Fé - Improvisation à Nice">
+    <meta name="keywords" content="improvisation, impro, nice, théâtre">
+    <meta name="author" content="TouCont'Fé">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="./assets/img/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="./assets/vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="./assets/vendor/tiny-slider/dist/tiny-slider.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="./assets/css/theme.min.css">
+
+    <!-- Demo Specific Styles -->
+    <style>
+      :root {
+        --cx-primary: #ff3f3a;
+        --cx-primary-rgb: 255,63,58;
+        --cx-gradient-from-color: #ff3f3a;
+        --cx-gradient-to-color: #f75e05;
+        --cx-link-color: #ff3f3a;
+        --cx-link-hover-color: #ff0d07;
+      }
+      .btn-primary {
+        --cx-btn-bg: #ff3f3a;
+        --cx-btn-border-color: #ff3f3a;
+        --cx-btn-hover-bg: #ff1a14;
+        --cx-btn-active-bg: #ff1a14;
+        --cx-btn-hover-border-color: #ff1a14;
+        --cx-btn-active-border-color: #ff1a14;
+      }
+      .btn-outline-primary {
+        --cx-btn-color: #ff3f3a;
+        --cx-btn-border-color: rgba(255,63,58, .4);
+        --cx-btn-hover-bg: #ff3f3a;
+        --cx-btn-active-bg: #ff3f3a;
+        --cx-btn-hover-border-color: #ff3f3a;
+        --cx-btn-active-border-color: #ff3f3a;
+      }
+      .btn-translucent-primary {
+        --cx-btn-color: #ff3f3a;
+        --cx-btn-bg: rgba(255,63,58, .2);
+        --cx-btn-hover-bg: #ff3f3a;
+        --cx-btn-active-bg: #ff3f3a;
+      }
+      .btn-hover-shadow:hover.btn-primary,
+      .btn-hover-shadow:hover.btn-outline-primary,
+      .btn-hover-shadow:hover.btn-translucent-primary,
+      .btn-hover-shadow:hover.btn-gradient {
+        --cx-btn-hover-shadow-color: rgba(255,63,58, .92);
+      }
+      .btn-scroll-top {
+        --cx-btn-scroll-top-bg: #ff3f3a;
+        --cx-btn-scroll-top-hover-bg: #ff1a14;
+      }
+      .accordion {
+        --cx-accordion-active-color: #ff3f3a;
+        --cx-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'%3e%3cpath fill-rule='evenodd' d='M7.999.667c.368 0 .667.298.667.667v6h6c.368 0 .667.298.667.667s-.299.667-.667.667h-6v6c0 .368-.298.667-.667.667s-.667-.299-.667-.667v-6h-6C.964 8.667.666 8.369.666 8s.298-.667.667-.667h6v-6c0-.368.298-.667.667-.667z' fill='%23ff3f3a'/%3e%3c/svg%3e");
+        --cx-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'%3e%3cpath fill-rule='evenodd' d='M.666 8c0-.368.298-.667.667-.667v1.333C.964 8.666.666 8.368.666 8zm14 0v.667H1.333V7.333h13.333V8zm0 0v.667c.368 0 .667-.298.667-.667s-.299-.667-.667-.667V8z' fill='%23ff3f3a'/%3e%3c/svg%3e");
+      }
+    </style>
+
+    <!-- Page loading styles-->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #787a80;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        aboutbackground-color: #cfcfd1;
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+  </head>
+
+
+  <!-- Body-->
+  <body>
+
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Chargement...</span>
+      </div>
+    </div>
+
+    <!-- Main content-->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper position-relative">
+
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg navbar-light navbar-sticky navbar-floating">
+        <div class="container px-0 px-xl-3">
+          <a class="navbar-brand order-lg-1 me-lg-5 me-0 pe-lg-2" href="index.html">
+            <img src="./assets/img/logo/logo-texte.svg" alt="Logo TouCont'Fé" width="130">
+          </a>
+          <div class="d-flex align-items-center order-lg-3">
+            <a class="btn btn-gradient btn-hover-shadow d-sm-inline-block d-none ms-4" href="https://www.helloasso.com/associations/toucont-fe">Billetterie</a>
+            <button class="navbar-toggler ms-1 me-n3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse1" aria-expanded="false">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <nav class="collapse navbar-collapse order-lg-2" id="navbarCollapse1">
+            <ul class="navbar-nav me-auto text-nowrap">
+              <li class="nav-item">
+                <a class="nav-link active" href="troupe.html">La Troupe</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="calendrier.html">Calendrier</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://linktr.ee/toucontfe">Réseaux Sociaux</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item d-sm-none d-block">
+                <a class="btn btn-sm btn-gradient btn-hover-shadow m-3" href="https://www.helloasso.com/associations/toucont-fe">Billetterie</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Courses grid-->
+      <section class="mt-4 pt-lg-5 pt-4 pb-lg-6 pb-5 bg-repeat-0 bg-position-center-x" style="background-image: url(./assets/img/shapes/shape.svg);">
+        <div class="container py-2">
+
+          <!-- Filterable grid container. IMPORTANT: it should wrap filters/sorters and target grid of items in order for plugin to work! -->
+          <div data-filter-grid>
+            <h3 class="h6 mb-2 text-uppercase text-center">Notre Troupe</h3>
+            <h2 class="h1 mb-lg-5 pb-md-2 text-center">Découvrez nos membres!</h2>
+
+            <!-- Filterable grid of items -->
+            <div class="row">
+
+              <!-- Item -->
+              <div class="grid-item marketing col-lg-4 col-sm-6 mb-sm-grid-gutter mb-3">
+                <article class="image-scale card card-hover shadow h-100">
+                  <img src="./assets/img/troupe/alyson.png" alt="Alyson">
+                  <div class="card-body pb-1">
+                    <h3 class="h5 mb-2 pt-1 nav-dark">Alyson</h3>
+                  </div>
+                  <div class="card-footer pt-2 pb-4 border-0">
+                    <div class="text-muted">Unicorn</div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Item -->
+              <div class="grid-item marketing col-lg-4 col-sm-6 mb-sm-grid-gutter mb-3">
+                <article class="image-scale card card-hover shadow h-100">
+                  <img src="./assets/img/troupe/anne.png" alt="Anne">
+                  <div class="card-body pb-1">
+                    <h3 class="h5 mb-2 pt-1 nav-dark">Anne</h3>
+                  </div>
+                  <div class="card-footer pt-2 pb-4 border-0">
+                    <div class="text-muted">La Première Dame</div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Item -->
+              <div class="grid-item marketing col-lg-4 col-sm-6 mb-sm-grid-gutter mb-3">
+                <article class="image-scale card card-hover shadow h-100">
+                  <img src="./assets/img/troupe/background.jpg" alt="Basile">
+                  <div class="card-body pb-1">
+                    <h3 class="h5 mb-2 pt-1 nav-dark">Basile</h3>
+                  </div>
+                  <div class="card-footer pt-2 pb-4 border-0">
+                    <div class="text-muted"></div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Item -->
+              <div class="grid-item marketing col-lg-4 col-sm-6 mb-sm-grid-gutter mb-3">
+                <article class="image-scale card card-hover shadow h-100">
+                  <img src="./assets/img/troupe/benoit.png" alt="Benoit">
+                  <div class="card-body pb-1">
+                    <h3 class="h5 mb-2 pt-1 nav-dark">Benoît</h3>
+                  </div>
+                  <div class="card-footer pt-2 pb-4 border-0">
+                    <div class="text-muted">Maître Capello</div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Item -->
+              <div class="grid-item marketing col-lg-4 col-sm-6 mb-sm-grid-gutter mb-3">
+                <article class="image-scale card card-hover shadow h-100">
+                  <img src="./assets/img/troupe/christophe.png" alt="Christophe">
+                  <div class="card-body pb-1">
+                    <h3 class="h5 mb-2 pt-1 nav-dark">Christophe</h3>
+                  </div>
+                  <div class="card-footer pt-2 pb-4 border-0">
+                    <div class="text-muted">El Professor</div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Item -->
+              <div class="grid-item marketing col-lg-4 col-sm-6 mb-sm-grid-gutter mb-3">
+                <article class="image-scale card card-hover shadow h-100">
+                  <img src="./assets/img/troupe/guillaume.png" alt="Guillaume">
+                  <div class="card-body pb-1">
+                    <h3 class="h5 mb-2 pt-1 nav-dark">Guillaume</h3>
+                  </div>
+                  <div class="card-footer pt-2 pb-4 border-0">
+                    <div class="text-muted">Accentueur</div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Item -->
+              <div class="grid-item marketing col-lg-4 col-sm-6 mb-sm-grid-gutter mb-3">
+                <article class="image-scale card card-hover shadow h-100">
+                  <img src="./assets/img/troupe/romain.png" alt="Romain">
+                  <div class="card-body pb-1">
+                    <h3 class="h5 mb-2 pt-1 nav-dark">Romain</h3>
+                  </div>
+                  <div class="card-footer pt-2 pb-4 border-0">
+                    <div class="text-muted">Le nain</div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Item -->
+              <div class="grid-item marketing col-lg-4 col-sm-6 mb-sm-grid-gutter mb-3">
+                <article class="image-scale card card-hover shadow h-100">
+                  <img src="./assets/img/troupe/background.jpg" alt="Sarah">
+                  <div class="card-body pb-1">
+                    <h3 class="h5 mb-2 pt-1 nav-dark">Sarah</h3>
+                  </div>
+                  <div class="card-footer pt-2 pb-4 border-0">
+                    <div class="text-muted"></div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Item -->
+              <div class="grid-item marketing col-lg-4 col-sm-6 mb-sm-grid-gutter mb-3">
+                <article class="image-scale card card-hover shadow h-100">
+                  <img src="./assets/img/troupe/severine.png" alt="Séverine">
+                  <div class="card-body pb-1">
+                    <h3 class="h5 mb-2 pt-1 nav-dark">Séverine</h3>
+                  </div>
+                  <div class="card-footer pt-2 pb-4 border-0">
+                    <div class="text-muted">Séverol Spritz</div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Item -->
+              <div class="grid-item marketing col-lg-4 col-sm-6 mb-sm-grid-gutter mb-3">
+                <article class="image-scale card card-hover shadow h-100">
+                  <img src="./assets/img/troupe/sylvain.png" alt="Sylvain">
+                  <div class="card-body pb-1">
+                    <h3 class="h5 mb-2 pt-1 nav-dark">Sylvain</h3>
+                  </div>
+                  <div class="card-footer pt-2 pb-4 border-0">
+                    <div class="text-muted">Le caméléon</div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Item -->
+              <div class="grid-item marketing col-lg-4 col-sm-6 mb-sm-grid-gutter mb-3">
+                <article class="image-scale card card-hover shadow h-100">
+                  <img src="./assets/img/troupe/yannick.png" alt="Yannick">
+                  <div class="card-body pb-1">
+                    <h3 class="h5 mb-2 pt-1 nav-dark">Yannick</h3>
+                  </div>
+                  <div class="card-footer pt-2 pb-4 border-0">
+                    <div class="text-muted">Bébé Yaya</div>
+                  </div>
+                </article>
+              </div>
+
+            </div>  
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer pt-sm-5 pt-4 bg-dark">
+      <div class="container py-3">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6 order-lg-1 order-1 mb-lg-0 mb-4">
+            <p class="mb-sm-4 mb-3 pb-lg-3 fs-xs text-light opacity-60">Improvisateurs niçois élevés sur les planches du théâtre de la Cité,
+            les Toucont'Fé vous accueillent pour des matches, cabarets et formats longs. Retrouvez nous au Théâtre de la Cité et au P'tit Baz'art du Zèbre !</p>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-2 order-sm-4 order-1 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Navigation</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="troupe.html" class="nav-link me-lg-0 me-sm-4 p-0 fw-normal">La Troupe</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="calendrier.html" class="nav-link me-lg-0 me-sm-4 p-0 fw-normal">Calendrier</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="contact.html" class="nav-link me-lg-0 me-sm-4 p-0 fw-normal">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-2 order-sm-4 order-1 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Réseaux Sociaux</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="https://www.facebook.com/toucontfe/" class="nav-link me-lg-0 me-sm-4 p-0 fw-normal">Facebook</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="https://www.instagram.com/toucontfe" class="nav-link me-lg-0 me-sm-4 p-0 fw-normal">Instagram</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="https://www.helloasso.com/associations/toucont-fe" class="nav-link me-lg-0 me-sm-4 p-0 fw-normal">HelloAsso</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 order-lg-4 order-sm-3 order-3 mb-md-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Contact</h3>
+            <ul class="nav nav-light flex-md-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="tel:0749219576" class="nav-link me-md-0 me-sm-4 p-0 fw-normal text-nowrap">
+                  <i class="ci-iphone me-2"></i>
+                  07 49 21 95 76
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="mailto:contact@toucontfe.fr" class="nav-link me-md-0 me-sm-4 p-0 fw-normal text-nowrap">
+                  <i class="ci-chat me-2"></i>
+                  contact@toucontfe.fr
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="https://g.page/r/CQz10V7z7qPREAI/review" class="nav-link me-md-0 me-sm-4 p-0 fw-normal text-nowrap">
+                  <i class="ci-star me-2"></i>
+                  Avis Google
+                </a>
+              </li>            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 order-lg-5 order-sm-2 order-4 mb-sm-0 mb-4">
+            <a href="https://www.facebook.com/toucontfe/" class="btn-social me-1 mb-2 mt-md-0 mt-sm-1">
+              <i class="ci-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/toucontfe/" class="btn-social me-1 mb-2 mt-md-0 mt-sm-1">
+              <i class="ci-instagram"></i>
+            </a>
+            <a href="https://goo.gl/maps/i6fcF95k4dDU9dVL8" class="btn-social mb-1 mt-md-0 mt-sm-1">
+              <i class="ci-google"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="container py-2">
+          <div class="d-flex align-items-sm-center justify-content-between py-1">
+            <div class="fs-xs text-light">
+              <span class="d-sm-inline d-block mb-1">
+                <span class="fs-sm">&copy; </span>
+                Tous droits réservés.
+              </span>
+            </div>
+            <div class="d-flex align-items-sm-center">
+              <span class="d-sm-inline-block d-none text-light fs-sm me-3 mb-1 align-vertical">Retour</span>
+              <a class="btn-scroll-top position-static rounded" href="#top" data-scroll>
+                <i class="btn-scroll-top-icon ci-angle-up"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="./assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="./assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="./assets/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script src="./assets/vendor/mixitup/dist/mixitup.min.js"></script>
+
+    <!-- Main theme script-->
+    <script src="./assets/js/theme.min.js"></script>
+  </body>
+</html>
