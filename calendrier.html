@@ -1,42 +1,67 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>TouCont'Fé | Calendrier</title>
 
     <!-- SEO Meta Tags-->
-    <meta name="description" content="TouCont'Fé - Improvisation à Nice">
-    <meta name="keywords" content="improvisation, impro, nice, théâtre">
-    <meta name="author" content="TouCont'Fé">
+    <meta name="description" content="TouCont'Fé - Improvisation à Nice" />
+    <meta name="keywords" content="improvisation, impro, nice, théâtre" />
+    <meta name="author" content="TouCont'Fé" />
 
     <!-- Viewport-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Favicon and Touch Icons-->
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
-    <link rel="manifest" href="./assets/img/site.webmanifest">
-    <link rel="mask-icon" color="#5bbad5" href="./assets/img/safari-pinned-tab.svg">
-    <meta name="msapplication-TileColor" content="#766df4">
-    <meta name="theme-color" content="#ffffff">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/img/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      color="#5bbad5"
+      href="./assets/img/safari-pinned-tab.svg"
+    />
+    <meta name="msapplication-TileColor" content="#766df4" />
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- Google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Vendor Styles-->
-    <link rel="stylesheet" media="screen" href="./assets/vendor/simplebar/dist/simplebar.min.css"/>
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="./assets/vendor/simplebar/dist/simplebar.min.css"
+    />
 
     <!-- Main Theme Styles + Bootstrap-->
-    <link rel="stylesheet" media="screen" href="./assets/css/theme.min.css">
+    <link rel="stylesheet" media="screen" href="./assets/css/theme.min.css" />
 
     <!-- Demo Specific Styles -->
     <style>
       :root {
         --cx-primary: #ff3f3a;
-        --cx-primary-rgb: 255,63,58;
+        --cx-primary-rgb: 255, 63, 58;
         --cx-gradient-from-color: #ff3f3a;
         --cx-gradient-to-color: #f75e05;
         --cx-link-color: #ff3f3a;
@@ -52,7 +77,7 @@
       }
       .btn-outline-primary {
         --cx-btn-color: #ff3f3a;
-        --cx-btn-border-color: rgba(255,63,58, .4);
+        --cx-btn-border-color: rgba(255, 63, 58, 0.4);
         --cx-btn-hover-bg: #ff3f3a;
         --cx-btn-active-bg: #ff3f3a;
         --cx-btn-hover-border-color: #ff3f3a;
@@ -60,7 +85,7 @@
       }
       .btn-translucent-primary {
         --cx-btn-color: #ff3f3a;
-        --cx-btn-bg: rgba(255,63,58, .2);
+        --cx-btn-bg: rgba(255, 63, 58, 0.2);
         --cx-btn-hover-bg: #ff3f3a;
         --cx-btn-active-bg: #ff3f3a;
       }
@@ -68,7 +93,7 @@
       .btn-hover-shadow:hover.btn-outline-primary,
       .btn-hover-shadow:hover.btn-translucent-primary,
       .btn-hover-shadow:hover.btn-gradient {
-        --cx-btn-hover-shadow-color: rgba(255,63,58, .92);
+        --cx-btn-hover-shadow-color: rgba(255, 63, 58, 0.92);
       }
       .btn-scroll-top {
         --cx-btn-scroll-top-bg: #ff3f3a;
@@ -91,8 +116,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        -webkit-transition: all .4s .2s ease-in-out;
-        transition: all .4s .2s ease-in-out;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
         background-color: #fff;
         opacity: 0;
         visibility: hidden;
@@ -110,8 +135,8 @@
         text-align: center;
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
-        -webkit-transition: opacity .2s ease-in-out;
-        transition: opacity .2s ease-in-out;
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
         opacity: 0;
       }
       .page-loading.active > .page-loading-inner {
@@ -127,13 +152,13 @@
         display: inline-block;
         width: 2.75rem;
         height: 2.75rem;
-        margin-bottom: .75rem;
+        margin-bottom: 0.75rem;
         vertical-align: text-bottom;
         background-color: #cfcfd1;
         border-radius: 50%;
         opacity: 0;
-        -webkit-animation: spinner .75s linear infinite;
-        animation: spinner .75s linear infinite;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
       }
       @-webkit-keyframes spinner {
         0% {
@@ -163,8 +188,8 @@
     <script>
       (function () {
         window.onload = function () {
-          var preloader = document.querySelector('.page-loading');
-          preloader.classList.remove('active');
+          var preloader = document.querySelector(".page-loading");
+          preloader.classList.remove("active");
           setTimeout(function () {
             preloader.remove();
           }, 2000);
@@ -173,31 +198,48 @@
     </script>
   </head>
 
-
   <!-- Body-->
   <body>
-
     <!-- Page loading spinner-->
     <div class="page-loading active">
       <div class="page-loading-inner">
-        <div class="page-spinner"></div><span>Chargement...</span>
+        <div class="page-spinner"></div>
+        <span>Chargement...</span>
       </div>
     </div>
 
     <!-- Main content-->
     <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
     <main class="page-wrapper position-relative">
-
       <!-- Navbar -->
       <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
-      <header class="header navbar navbar-expand-lg navbar-light navbar-sticky navbar-floating">
+      <header
+        class="header navbar navbar-expand-lg navbar-light navbar-sticky navbar-floating"
+      >
         <div class="container px-0 px-xl-3">
-          <a class="navbar-brand order-lg-1 me-lg-5 me-0 pe-lg-2" href="index.html">
-            <img src="./assets/img/logo/logo-texte.svg" alt="Logo TouCont'Fé" width="130">
+          <a
+            class="navbar-brand order-lg-1 me-lg-5 me-0 pe-lg-2"
+            href="index.html"
+          >
+            <img
+              src="./assets/img/logo/logo-texte.svg"
+              alt="Logo TouCont'Fé"
+              width="130"
+            />
           </a>
           <div class="d-flex align-items-center order-lg-3">
-            <a class="btn btn-gradient btn-hover-shadow d-sm-inline-block d-none ms-4" href="https://www.helloasso.com/associations/toucont-fe">Billetterie</a>
-            <button class="navbar-toggler ms-1 me-n3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse1" aria-expanded="false">
+            <a
+              class="btn btn-gradient btn-hover-shadow d-sm-inline-block d-none ms-4"
+              href="https://www.helloasso.com/associations/toucont-fe"
+              >Billetterie</a
+            >
+            <button
+              class="navbar-toggler ms-1 me-n3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse1"
+              aria-expanded="false"
+            >
               <span class="navbar-toggler-icon"></span>
             </button>
           </div>
@@ -210,13 +252,19 @@
                 <a class="nav-link active" href="calendrier.html">Calendrier</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://linktr.ee/toucontfe">Réseaux Sociaux</a>
+                <a class="nav-link" href="https://linktr.ee/toucontfe"
+                  >Réseaux Sociaux</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
               <li class="nav-item d-sm-none d-block">
-                <a class="btn btn-sm btn-gradient btn-hover-shadow m-3" href="https://www.helloasso.com/associations/toucont-fe">Billetterie</a>
+                <a
+                  class="btn btn-sm btn-gradient btn-hover-shadow m-3"
+                  href="https://www.helloasso.com/associations/toucont-fe"
+                  >Billetterie</a
+                >
               </li>
             </ul>
           </nav>
@@ -224,133 +272,464 @@
       </header>
 
       <!-- Events-->
-      <section class="mt-4 pt-lg-5 pt-4 pb-lg-6 pb-sm-5 pb-4 bg-repeat-0 bg-position-center-x bg-size-cover" style="background-image: url(./assets/img/shapes/shapes-event.svg);">
+      <section
+        class="mt-4 pt-lg-5 pt-4 pb-lg-6 pb-sm-5 pb-4 bg-repeat-0 bg-position-center-x bg-size-cover"
+        style="background-image: url(./assets/img/shapes/shapes-event.svg)"
+      >
         <div class="container">
-          <h3 class="h6 mb-2 text-uppercase text-center">Prochains spectacles</h3>
+          <h3 class="h6 mb-2 text-uppercase text-center">
+            Prochains spectacles
+          </h3>
           <h2 class="h1 mb-lg-5 pb-md-2 text-center">Où et Quand nous voir</h2>
 
           <!-- Events list made of horizontal cards -->
-          <div class="card card-horizontal card-hover mb-4 px-sm-5 py-sm-0 py-3">
-            <div class="card-header flex-shrink-0 my-sm-4 ms-sm-n2 py-sm-2 px-sm-0 border-0">
+          <div
+            class="card card-horizontal card-hover mb-4 px-sm-5 py-sm-0 py-3"
+          >
+            <div
+              class="card-header flex-shrink-0 my-sm-4 ms-sm-n2 py-sm-2 px-sm-0 border-0"
+            >
               <div class="d-flex">
-                <span class="display-4 mb-0 text-primary" style="font-size: 3rem;">06</span>
+                <span
+                  class="display-4 mb-0 text-primary"
+                  style="font-size: 3rem"
+                  >18</span
+                >
                 <div class="ms-3 ps-1">
-                  <h6 class="h5 mb-1">Janvier</h6>
+                  <h6 class="h5 mb-1">Février</h6>
                   <span class="text-muted">20:30</span>
                 </div>
               </div>
             </div>
             <div class="card-body m-sm-4 py-sm-2 py-0 px-sm-3">
               <h3 class="h5 mb-sm-1 mb-2">
-                <a href="http://www.theatredelacite.fr/spectacles.php?li=1&id=1280&pa=1" class="nav-link">Impro Middle Form : le A4</a>
+                <a
+                  href="https://www.helloasso.com/associations/toucont-fe/evenements/long-form-improvise-le-banc"
+                  class="nav-link"
+                  >Longform "Le Banc"</a
+                >
               </h3>
-              <a href="https://goo.gl/maps/oPFCCoi2HLSstZ6S9" class="nav-link"><span class="text-muted">Théâtre de la Cité</span></a>
+              <a href="https://goo.gl/maps/w1Vzj4yqbB873J5M9" class="nav-link"
+                ><span class="text-muted">Le P'tit Baz'art du Zèbre</span></a
+              >
             </div>
-            <div class="card-footer flex-shrink-0 my-sm-4 mt-5 me-sm-n2 py-sm-2 px-sm-0 border-0">
-              <a href="http://www.theatredelacite.fr/spectacles.php?li=1&id=1280&pa=1" class="btn btn-outline-primary btn-hover-shadow d-sm-inline-block d-block">Réservez</a>
+            <div
+              class="card-footer flex-shrink-0 my-sm-4 mt-5 me-sm-n2 py-sm-2 px-sm-0 border-0"
+            >
+              <a
+                href="https://www.helloasso.com/associations/toucont-fe/evenements/long-form-improvise-le-banc"
+                class="btn btn-outline-primary btn-hover-shadow d-sm-inline-block d-block"
+                >Réserver</a
+              >
             </div>
           </div>
 
-          <div class="card card-horizontal card-hover mb-4 px-sm-5 py-sm-0 py-3">
-            <div class="card-header flex-shrink-0 my-sm-4 ms-sm-n2 py-sm-2 px-sm-0 border-0">
+          <div
+            class="card card-horizontal card-hover mb-4 px-sm-5 py-sm-0 py-3"
+          >
+            <div
+              class="card-header flex-shrink-0 my-sm-4 ms-sm-n2 py-sm-2 px-sm-0 border-0"
+            >
               <div class="d-flex">
-                <span class="display-4 mb-0 text-primary" style="font-size: 3rem;">14</span>
+                <span
+                  class="display-4 mb-0 text-primary"
+                  style="font-size: 3rem"
+                  >25</span
+                >
                 <div class="ms-3 ps-1">
-                  <h6 class="h5 mb-1">Janvier</h6>
+                  <h6 class="h5 mb-1">Février</h6>
                   <span class="text-muted">20:30</span>
                 </div>
               </div>
             </div>
             <div class="card-body m-sm-4 py-sm-2 py-0 px-sm-3">
               <h3 class="h5 mb-sm-1 mb-2">
-                <a href="https://www.helloasso.com/associations/toucont-fe/evenements/cabaret-d-improvisation" class="nav-link">Cabaret d'improvisation</a>
+                <a
+                  href="http://www.theatredelacite.fr/spectacles.php?li=1&id=1373&pa=2"
+                  class="nav-link"
+                  >Match contre la LICA</a
+                >
               </h3>
-              <a href="https://goo.gl/maps/w1Vzj4yqbB873J5M9" class="nav-link"><span class="text-muted">Le P'tit Baz'art du Zèbre</span></a>
+              <a href="https://goo.gl/maps/oPFCCoi2HLSstZ6S9" class="nav-link"
+                ><span class="text-muted">Théâtre de la Cité</span></a
+              >
             </div>
-            <div class="card-footer flex-shrink-0 my-sm-4 mt-5 me-sm-n2 py-sm-2 px-sm-0 border-0">
-              <a href="https://www.helloasso.com/associations/toucont-fe/evenements/cabaret-d-improvisation" class="btn btn-outline-primary btn-hover-shadow d-sm-inline-block d-block">Réservez</a>
+            <div
+              class="card-footer flex-shrink-0 my-sm-4 mt-5 me-sm-n2 py-sm-2 px-sm-0 border-0"
+            >
+              <a
+                href="http://www.theatredelacite.fr/spectacles.php?li=1&id=1373&pa=2"
+                class="btn btn-outline-primary btn-hover-shadow d-sm-inline-block d-block"
+                >Réserver</a
+              >
             </div>
           </div>
 
+          <div
+            class="card card-horizontal card-hover mb-4 px-sm-5 py-sm-0 py-3"
+          >
+            <div
+              class="card-header flex-shrink-0 my-sm-4 ms-sm-n2 py-sm-2 px-sm-0 border-0"
+            >
+              <div class="d-flex">
+                <span
+                  class="display-4 mb-0 text-primary"
+                  style="font-size: 3rem"
+                  >18</span
+                >
+                <div class="ms-3 ps-1">
+                  <h6 class="h5 mb-1">Mars</h6>
+                  <span class="text-muted">20:30</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body m-sm-4 py-sm-2 py-0 px-sm-3">
+              <h3 class="h5 mb-sm-1 mb-2">
+                <a href="#" class="nav-link">Cabaret "Jeux"</a>
+              </h3>
+              <a href="https://goo.gl/maps/w1Vzj4yqbB873J5M9" class="nav-link"
+                ><span class="text-muted">Le P'tit Baz'art du Zèbre</span></a
+              >
+            </div>
+            <div
+              class="card-footer flex-shrink-0 my-sm-4 mt-5 me-sm-n2 py-sm-2 px-sm-0 border-0"
+            >
+              <a
+                href="#"
+                class="btn btn-outline-primary btn-hover-shadow d-sm-inline-block d-block"
+                >Réserver</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="card card-horizontal card-hover mb-4 px-sm-5 py-sm-0 py-3"
+          >
+            <div
+              class="card-header flex-shrink-0 my-sm-4 ms-sm-n2 py-sm-2 px-sm-0 border-0"
+            >
+              <div class="d-flex">
+                <span
+                  class="display-4 mb-0 text-primary"
+                  style="font-size: 3rem"
+                  >06</span
+                >
+                <div class="ms-3 ps-1">
+                  <h6 class="h5 mb-1">Avril</h6>
+                  <span class="text-muted">20:30</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body m-sm-4 py-sm-2 py-0 px-sm-3">
+              <h3 class="h5 mb-sm-1 mb-2">
+                <a
+                  href="http://www.theatredelacite.fr/spectacles.php?li=1&id=1374&pa=3"
+                  class="nav-link"
+                  >Longform "Le Banc"</a
+                >
+              </h3>
+              <a href="https://goo.gl/maps/oPFCCoi2HLSstZ6S9" class="nav-link"
+                ><span class="text-muted">Théâtre de la Cité</span></a
+              >
+            </div>
+            <div
+              class="card-footer flex-shrink-0 my-sm-4 mt-5 me-sm-n2 py-sm-2 px-sm-0 border-0"
+            >
+              <a
+                href="http://www.theatredelacite.fr/spectacles.php?li=1&id=1374&pa=3"
+                class="btn btn-outline-primary btn-hover-shadow d-sm-inline-block d-block"
+                >Réserver</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="card card-horizontal card-hover mb-4 px-sm-5 py-sm-0 py-3"
+          >
+            <div
+              class="card-header flex-shrink-0 my-sm-4 ms-sm-n2 py-sm-2 px-sm-0 border-0"
+            >
+              <div class="d-flex">
+                <span
+                  class="display-4 mb-0 text-primary"
+                  style="font-size: 3rem"
+                  >15</span
+                >
+                <div class="ms-3 ps-1">
+                  <h6 class="h5 mb-1">Avril</h6>
+                  <span class="text-muted">20:30</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body m-sm-4 py-sm-2 py-0 px-sm-3">
+              <h3 class="h5 mb-sm-1 mb-2">
+                <a href="#" class="nav-link">Cabaret "Deepform"</a>
+              </h3>
+              <a href="https://goo.gl/maps/w1Vzj4yqbB873J5M9" class="nav-link"
+                ><span class="text-muted">Le P'tit Baz'art du Zèbre</span></a
+              >
+            </div>
+            <div
+              class="card-footer flex-shrink-0 my-sm-4 mt-5 me-sm-n2 py-sm-2 px-sm-0 border-0"
+            >
+              <a
+                href="#"
+                class="btn btn-outline-primary btn-hover-shadow d-sm-inline-block d-block"
+                >Réserver</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="card card-horizontal card-hover mb-4 px-sm-5 py-sm-0 py-3"
+          >
+            <div
+              class="card-header flex-shrink-0 my-sm-4 ms-sm-n2 py-sm-2 px-sm-0 border-0"
+            >
+              <div class="d-flex">
+                <span
+                  class="display-4 mb-0 text-primary"
+                  style="font-size: 3rem"
+                  >20</span
+                >
+                <div class="ms-3 ps-1">
+                  <h6 class="h5 mb-1">Mai</h6>
+                  <span class="text-muted">20:30</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body m-sm-4 py-sm-2 py-0 px-sm-3">
+              <h3 class="h5 mb-sm-1 mb-2">
+                <a href="#" class="nav-link">Match contre les Countablabla</a>
+              </h3>
+              <a href="https://goo.gl/maps/w1Vzj4yqbB873J5M9" class="nav-link"
+                ><span class="text-muted">Le P'tit Baz'art du Zèbre</span></a
+              >
+            </div>
+            <div
+              class="card-footer flex-shrink-0 my-sm-4 mt-5 me-sm-n2 py-sm-2 px-sm-0 border-0"
+            >
+              <a
+                href="#"
+                class="btn btn-outline-primary btn-hover-shadow d-sm-inline-block d-block"
+                >Réserver</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="card card-horizontal card-hover mb-4 px-sm-5 py-sm-0 py-3"
+          >
+            <div
+              class="card-header flex-shrink-0 my-sm-4 ms-sm-n2 py-sm-2 px-sm-0 border-0"
+            >
+              <div class="d-flex">
+                <span
+                  class="display-4 mb-0 text-primary"
+                  style="font-size: 3rem"
+                  >17</span
+                >
+                <div class="ms-3 ps-1">
+                  <h6 class="h5 mb-1">Juin</h6>
+                  <span class="text-muted">20:30</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body m-sm-4 py-sm-2 py-0 px-sm-3">
+              <h3 class="h5 mb-sm-1 mb-2">
+                <a href="#" class="nav-link">Surprise!</a>
+              </h3>
+              <a href="https://goo.gl/maps/w1Vzj4yqbB873J5M9" class="nav-link"
+                ><span class="text-muted">Le P'tit Baz'art du Zèbre</span></a
+              >
+            </div>
+            <div
+              class="card-footer flex-shrink-0 my-sm-4 mt-5 me-sm-n2 py-sm-2 px-sm-0 border-0"
+            >
+              <a
+                href="#"
+                class="btn btn-outline-primary btn-hover-shadow d-sm-inline-block d-block"
+                >Réserver</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="card card-horizontal card-hover mb-4 px-sm-5 py-sm-0 py-3"
+          >
+            <div
+              class="card-header flex-shrink-0 my-sm-4 ms-sm-n2 py-sm-2 px-sm-0 border-0"
+            >
+              <div class="d-flex">
+                <span
+                  class="display-4 mb-0 text-primary"
+                  style="font-size: 3rem"
+                  >01</span
+                >
+                <div class="ms-3 ps-1">
+                  <h6 class="h5 mb-1">Juillet</h6>
+                  <span class="text-muted">??:??</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body m-sm-4 py-sm-2 py-0 px-sm-3">
+              <h3 class="h5 mb-sm-1 mb-2">
+                <a href="#" class="nav-link">Match contre la LICA</a>
+              </h3>
+              <a href="#" class="nav-link"
+                ><span class="text-muted">Mandelieu</span></a
+              >
+            </div>
+            <div
+              class="card-footer flex-shrink-0 my-sm-4 mt-5 me-sm-n2 py-sm-2 px-sm-0 border-0"
+            >
+              <a
+                href="#"
+                class="btn btn-outline-primary btn-hover-shadow d-sm-inline-block d-block"
+                >Réserver</a
+              >
+            </div>
+          </div>
+          <!-- Fin events -->
         </div>
       </section>
-
     </main>
 
     <!-- Footer -->
     <footer class="footer pt-sm-5 pt-4 bg-dark">
       <div class="container py-3">
         <div class="row">
-          <div class="col-lg-3 col-md-4 col-sm-6 order-lg-1 order-1 mb-lg-0 mb-4">
-            <p class="mb-sm-4 mb-3 pb-lg-3 fs-xs text-light opacity-60">Improvisateurs niçois élevés sur les planches du théâtre de la Cité,
-            les Toucont'Fé vous accueillent pour des matches, cabarets et formats longs. Retrouvez nous au Théâtre de la Cité et au P'tit Baz'art du Zèbre !</p>
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 order-lg-1 order-1 mb-lg-0 mb-4"
+          >
+            <p class="mb-sm-4 mb-3 pb-lg-3 fs-xs text-light opacity-60">
+              Improvisateurs niçois élevés sur les planches du théâtre de la
+              Cité, les Toucont'Fé vous accueillent pour des matches, cabarets
+              et formats longs. Retrouvez nous au Théâtre de la Cité et au P'tit
+              Baz'art du Zèbre !
+            </p>
           </div>
-          <div class="col-lg-2 col-sm-12 col-6 order-lg-2 order-sm-4 order-1 mb-lg-0 mb-4">
+          <div
+            class="col-lg-2 col-sm-12 col-6 order-lg-2 order-sm-4 order-1 mb-lg-0 mb-4"
+          >
             <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Navigation</h3>
             <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
               <li class="nav-item mb-2">
-                <a href="troupe.html" class="nav-link me-lg-0 me-sm-4 p-0 fw-normal">La Troupe</a>
+                <a
+                  href="troupe.html"
+                  class="nav-link me-lg-0 me-sm-4 p-0 fw-normal"
+                  >La Troupe</a
+                >
               </li>
               <li class="nav-item mb-2">
-                <a href="calendrier.html" class="nav-link me-lg-0 me-sm-4 p-0 fw-normal">Calendrier</a>
+                <a
+                  href="calendrier.html"
+                  class="nav-link me-lg-0 me-sm-4 p-0 fw-normal"
+                  >Calendrier</a
+                >
               </li>
               <li class="nav-item mb-2">
-                <a href="contact.html" class="nav-link me-lg-0 me-sm-4 p-0 fw-normal">Contact</a>
+                <a
+                  href="contact.html"
+                  class="nav-link me-lg-0 me-sm-4 p-0 fw-normal"
+                  >Contact</a
+                >
               </li>
             </ul>
           </div>
-          <div class="col-lg-2 col-sm-12 col-6 order-lg-3 order-sm-5 order-2 mb-lg-0 mb-4">
-            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Réseaux Sociaux</h3>
+          <div
+            class="col-lg-2 col-sm-12 col-6 order-lg-3 order-sm-5 order-2 mb-lg-0 mb-4"
+          >
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">
+              Réseaux Sociaux
+            </h3>
             <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
               <li class="nav-item mb-2">
-                <a href="https://www.facebook.com/toucontfe/" class="nav-link me-lg-0 me-sm-4 p-0 fw-normal">Facebook</a>
+                <a
+                  href="https://www.facebook.com/toucontfe/"
+                  class="nav-link me-lg-0 me-sm-4 p-0 fw-normal"
+                  >Facebook</a
+                >
               </li>
               <li class="nav-item mb-2">
-                <a href="https://www.instagram.com/toucontfe" class="nav-link me-lg-0 me-sm-4 p-0 fw-normal">Instagram</a>
+                <a
+                  href="https://www.instagram.com/toucontfe"
+                  class="nav-link me-lg-0 me-sm-4 p-0 fw-normal"
+                  >Instagram</a
+                >
               </li>
               <li class="nav-item mb-2">
-                <a href="https://www.helloasso.com/associations/toucont-fe" class="nav-link me-lg-0 me-sm-4 p-0 fw-normal">HelloAsso</a>
+                <a
+                  href="https://www.helloasso.com/associations/toucont-fe"
+                  class="nav-link me-lg-0 me-sm-4 p-0 fw-normal"
+                  >HelloAsso</a
+                >
               </li>
             </ul>
           </div>
-          <div class="col-lg-2 col-md-4 order-lg-4 order-sm-3 order-3 mb-md-0 mb-4">
+          <div
+            class="col-lg-2 col-md-4 order-lg-4 order-sm-3 order-3 mb-md-0 mb-4"
+          >
             <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Contact</h3>
             <ul class="nav nav-light flex-md-column flex-sm-row flex-column">
               <li class="nav-item mb-2">
-                <a href="tel:0749219576" class="nav-link me-md-0 me-sm-4 p-0 fw-normal text-nowrap">
+                <a
+                  href="tel:0749219576"
+                  class="nav-link me-md-0 me-sm-4 p-0 fw-normal text-nowrap"
+                >
                   <i class="ci-iphone me-2"></i>
                   07 49 21 95 76
                 </a>
               </li>
               <li class="nav-item mb-2">
-                <a href="mailto:contact@toucontfe.fr" class="nav-link me-md-0 me-sm-4 p-0 fw-normal text-nowrap">
+                <a
+                  href="mailto:contact@toucontfe.fr"
+                  class="nav-link me-md-0 me-sm-4 p-0 fw-normal text-nowrap"
+                >
                   <i class="ci-chat me-2"></i>
                   contact@toucontfe.fr
                 </a>
               </li>
               <li class="nav-item mb-2">
-                <a href="https://g.page/r/CQz10V7z7qPREAI/review" class="nav-link me-md-0 me-sm-4 p-0 fw-normal text-nowrap">
+                <a
+                  href="https://g.page/r/CQz10V7z7qPREAI/review"
+                  class="nav-link me-md-0 me-sm-4 p-0 fw-normal text-nowrap"
+                >
                   <i class="ci-star me-2"></i>
                   Avis Google
                 </a>
-              </li>            </ul>
+              </li>
+            </ul>
           </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 order-lg-5 order-sm-2 order-4 mb-sm-0 mb-4">
-            <a href="https://www.facebook.com/toucontfe/" class="btn-social me-1 mb-2 mt-md-0 mt-sm-1">
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 order-lg-5 order-sm-2 order-4 mb-sm-0 mb-4"
+          >
+            <a
+              href="https://www.facebook.com/toucontfe/"
+              class="btn-social me-1 mb-2 mt-md-0 mt-sm-1"
+            >
               <i class="ci-facebook"></i>
             </a>
-            <a href="https://www.instagram.com/toucontfe/" class="btn-social me-1 mb-2 mt-md-0 mt-sm-1">
+            <a
+              href="https://www.instagram.com/toucontfe/"
+              class="btn-social me-1 mb-2 mt-md-0 mt-sm-1"
+            >
               <i class="ci-instagram"></i>
             </a>
-            <a href="https://goo.gl/maps/i6fcF95k4dDU9dVL8" class="btn-social mb-1 mt-md-0 mt-sm-1">
+            <a
+              href="https://goo.gl/maps/i6fcF95k4dDU9dVL8"
+              class="btn-social mb-1 mt-md-0 mt-sm-1"
+            >
               <i class="ci-google"></i>
-            </a> 
+            </a>
           </div>
         </div>
       </div>
       <div>
         <div class="container py-2">
-          <div class="d-flex align-items-sm-center justify-content-between py-1">
+          <div
+            class="d-flex align-items-sm-center justify-content-between py-1"
+          >
             <div class="fs-xs text-light">
               <span class="d-sm-inline d-block mb-1">
                 <span class="fs-sm">&copy; </span>
