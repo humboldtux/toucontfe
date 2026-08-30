@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>TouCont'Fé | Accueil</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="TouCont'Fé - Improvisation à Nice">
+    <meta name="keywords" content="improvisation, impro, nice, théâtre">
+    <meta name="author" content="TouCont'Fé">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="./assets/img/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="./assets/vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="./assets/vendor/tiny-slider/dist/tiny-slider.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="./assets/css/theme.min.css">
+
+    <!-- Vendor scripts + main theme script: deferred, order preserved (bootstrap -> vendors -> theme.min.js) -->
+    <script defer src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="./assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script defer src="./assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script defer src="./assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script defer src="./assets/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script defer src="./assets/js/theme.min.js"></script>
+
+    <!-- Demo Specific Styles -->
+    <style>
+      :root {
+        --cx-primary: #ff3f3a;
+        --cx-primary-rgb: 255,63,58;
+        --cx-gradient-from-color: #ff3f3a;
+        --cx-gradient-to-color: #f75e05;
+        --cx-link-color: #ff3f3a;
+        --cx-link-hover-color: #ff0d07;
+      }
+      .btn-primary {
+        --cx-btn-bg: #ff3f3a;
+        --cx-btn-border-color: #ff3f3a;
+        --cx-btn-hover-bg: #ff1a14;
+        --cx-btn-active-bg: #ff1a14;
+        --cx-btn-hover-border-color: #ff1a14;
+        --cx-btn-active-border-color: #ff1a14;
+      }
+      .btn-outline-primary {
+        --cx-btn-color: #ff3f3a;
+        --cx-btn-border-color: rgba(255,63,58, .4);
+        --cx-btn-hover-bg: #ff3f3a;
+        --cx-btn-active-bg: #ff3f3a;
+        --cx-btn-hover-border-color: #ff3f3a;
+        --cx-btn-active-border-color: #ff3f3a;
+      }
+      .btn-translucent-primary {
+        --cx-btn-color: #ff3f3a;
+        --cx-btn-bg: rgba(255,63,58, .2);
+        --cx-btn-hover-bg: #ff3f3a;
+        --cx-btn-active-bg: #ff3f3a;
+      }
+      .btn-hover-shadow:hover.btn-primary,
+      .btn-hover-shadow:hover.btn-outline-primary,
+      .btn-hover-shadow:hover.btn-translucent-primary,
+      .btn-hover-shadow:hover.btn-gradient {
+        --cx-btn-hover-shadow-color: rgba(255,63,58, .92);
+      }
+      .btn-scroll-top {
+        --cx-btn-scroll-top-bg: #ff3f3a;
+        --cx-btn-scroll-top-hover-bg: #ff1a14;
+      }
+      .accordion {
+        --cx-accordion-active-color: #ff3f3a;
+        --cx-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'%3e%3cpath fill-rule='evenodd' d='M7.999.667c.368 0 .667.298.667.667v6h6c.368 0 .667.298.667.667s-.299.667-.667.667h-6v6c0 .368-.298.667-.667.667s-.667-.299-.667-.667v-6h-6C.964 8.667.666 8.369.666 8s.298-.667.667-.667h6v-6c0-.368.298-.667.667-.667z' fill='%23ff3f3a'/%3e%3c/svg%3e");
+        --cx-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'%3e%3cpath fill-rule='evenodd' d='M.666 8c0-.368.298-.667.667-.667v1.333C.964 8.666.666 8.368.666 8zm14 0v.667H1.333V7.333h13.333V8zm0 0v.667c.368 0 .667-.298.667-.667s-.299-.667-.667-.667V8z' fill='%23ff3f3a'/%3e%3c/svg%3e");
+      }
+    </style>
+
+    <!-- Page loading styles-->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #787a80;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #cfcfd1;
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Begin Sendinblue Form -->
+    <!-- START - We recommend to place the below code in head tag of your website html  -->
+    <style>
+@font-face {
+  font-display: block;
+  font-family: Roboto;
+  src: url(https://assets.sendinblue.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.sendinblue.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+}
+
+  @font-face {
+    font-display: fallback;
+    font-family: Roboto;
+    font-weight: 600;
+    src: url(https://assets.sendinblue.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.sendinblue.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+  }
+
+  @font-face {
+    font-display: fallback;
+    font-family: Roboto;
+    font-weight: 700;
+    src: url(https://assets.sendinblue.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.sendinblue.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+  }
+
+  #sib-container input:-ms-input-placeholder {
+    text-align: left;
+    font-family: "Helvetica", sans-serif;
+    color: #c0ccda;
+  }
+
+  #sib-container input::placeholder {
+    text-align: left;
+    font-family: "Helvetica", sans-serif;
+    color: #c0ccda;
+  }
+
+  #sib-container textarea::placeholder {
+    text-align: left;
+    font-family: "Helvetica", sans-serif;
+    color: #c0ccda;
+  }
+    </style>
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+    <!--  END - We recommend to place the above code in head tag of your website html -->
+
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+  </head>
+
+
+  <!-- Body-->
+  <body>
+
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Chargement...</span>
+      </div>
+    </div>
+
+    <!-- Main content-->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper position-relative">
+
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg navbar-light navbar-sticky navbar-floating">
+        <div class="container px-0 px-xl-3">
+          <a class="navbar-brand order-lg-1 me-lg-5 me-0 pe-lg-2" href="index.html">
+            <img src="./assets/img/logo/logo-texte.svg" alt="Logo TouCont'Fé" width="130">
+          </a>
+          <div class="d-flex align-items-center order-lg-3">
+            <a class="btn btn-gradient btn-hover-shadow d-sm-inline-block d-none ms-4" href="https://www.helloasso.com/associations/toucont-fe">Billetterie</a>
+            <button class="navbar-toggler ms-1 me-n3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse1" aria-expanded="false">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <nav class="collapse navbar-collapse order-lg-2" id="navbarCollapse1">
+            <ul class="navbar-nav me-auto text-nowrap">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  >La Troupe</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="troupe.html">Nos Membres</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="hymne.html">Notre Hymne</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="calendrier.html">Calendrier</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://linktr.ee/toucontfe">Réseaux Sociaux</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item d-sm-none d-block">
+                <a class="m-3 btn btn-sm btn-gradient btn-hover-shadow" href="https://www.helloasso.com/associations/toucont-fe">Billetterie</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Page content-->
+      <section class="pt-5 mb-5 d-flex min-vh-100 mb-lg-6 pt-lg-6 jarallax" data-jarallax data-speed="0.8" style="background-color: #f9dcd4;">
+        <div class="container d-flex flex-column justify-content-between">
+          <div class="row align-items-center h-100">
+            <div class="order-2 text-center col-xl-5 col-md-6 order-md-1 me-xl-auto text-md-start">
+              <h1 class="pb-3 mb-3 display-2 mb-md-5">Les TouCont'Fé Troupe d'impro à Nice</h1>
+              <a href="#calendar" class="px-4 mb-3 btn btn-lg btn-outline-primary btn-hover-shadow me-sm-4 me-2 px-md-5">Prochains Spectacles</a>
+              <a href="calendrier.html" class="px-4 mb-3 btn btn-lg btn-gradient btn-hover-shadow px-md-5">Calendrier</a>
+            </div>
+            <div class="order-1 mx-auto mb-5 col-md-6 col-sm-10 order-md-2 mx-md-0 mb-md-0">
+              <img src="./assets/img/logo/logo.svg" alt="Logo Cercle">
+            </div>
+          </div>
+        </div>
+        <div class="jarallax-img" style="background-image: url(./assets/img/bg-index.png); background-image: image-set(url(./assets/img/bg-index.avif) type('image/avif'), url(./assets/img/bg-index.webp) type('image/webp'), url(./assets/img/bg-index.png) type('image/png'));"></div>
+      </section>
+
+      <!-- Benefits -->
+      <section class="container pt-4 pb-5 pt-lg-5 pb-lg-6">
+        <h3 class="mb-2 h6 text-uppercase text-sm-center">NOS SPECTACLES</h3>
+        <h2 class="h1 mb-lg-5 pb-md-2 text-sm-center">Quand on est sur scène</h2>
+        <div data-simplebar data-simplebar-auto-hide="false">
+          <ul class="flex-nowrap mb-3 nav nav-tabs nav-fill text-nowrap" role="tablist">
+            <li class="nav-item">
+              <a href="#match" class="nav-link active" id="match-tab" data-bs-toggle="tab" role="tab" aria-controls="match" aria-selected="true">
+                <i class="align-middle ci-star mt-n1 me-2"></i>
+                Match et Catch
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#cabaret" class="nav-link" id="cabaret-tab" data-bs-toggle="tab" role="tab" aria-controls="cabaret" aria-selected="false">
+                <i class="align-middle ci-mic mt-n1 me-2"></i>
+                Cabaret
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#banc" class="nav-link" id="banc-tab" data-bs-toggle="tab" role="tab" aria-controls="banc" aria-selected="false">
+                <i class="align-middle ci-world mt-n1 me-2"></i>
+                Le Banc
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#a4" class="nav-link" id="a4-tab" data-bs-toggle="tab" role="tab" aria-controls="a4" aria-selected="false">
+                <i class="align-middle ci-files mt-n1 me-2"></i>
+                A4
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#improvgames" class="nav-link" id="improvgames-tab" data-bs-toggle="tab" role="tab" aria-controls="improvgames" aria-selected="false">
+                <i class="align-middle ci-files mt-n1 me-2"></i>
+                Improv'Games
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="pt-3 mt-3 tab-content mt-md-4">
+          <div class="tab-pane fade show active" id="match" role="tabpanel" aria-labelledby="match-tab">
+            <div class="row align-items-center">
+              <div class="order-2 col-lg-5 col-sm-6 order-sm-1 me-auto">
+                <h3 class="mb-3 h2 mb-md-4">Pour des rencontres endiablées</h3>
+                <p class="mb-0">Deux équipes de comédiens se font face et devront improviser à partir de sujets imposés par l'arbitre.
+                Après chaque improvisation, c’est à toi public de désigner les vainqueurs.
+                Des maillots de Hockey, des fautes, des coups de sifflet. Et surtout ambiance et humour assurés.
+              </div>
+              <div class="order-1 pb-2 mb-4 col-sm-6 order-sm-2 mb-sm-0 pb-sm-0">
+                <picture>
+                  <source type="image/avif" srcset="./assets/img/spectacle/match.avif">
+                  <source type="image/webp" srcset="./assets/img/spectacle/match.webp">
+                  <img src="./assets/img/spectacle/match.webp" alt="Match/Catch"
+                       width="1440" height="1440" loading="lazy" decoding="async">
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="cabaret" role="tabpanel" aria-labelledby="cabaret-tab">
+            <div class="row align-items-center">
+              <div class="order-2 col-lg-5 col-sm-6 order-sm-1 me-auto">
+                <h3 class="mb-3 h2 mb-md-4">Pour toi public</h3>
+                <p class="mb-0">Nos comédiens interprètent les thèmes proposés par le public dans différentes catégories sous la houlette d'un maître de cérémonie.</p>
+              </div>
+              <div class="order-1 pb-2 mb-4 col-sm-6 order-sm-2 mb-sm-0 pb-sm-0">
+                <picture>
+                  <source type="image/avif"
+                    srcset="./assets/img/spectacle/cabaret-480.avif 480w,
+                            ./assets/img/spectacle/cabaret-800.avif 800w,
+                            ./assets/img/spectacle/cabaret-1200.avif 1200w,
+                            ./assets/img/spectacle/cabaret-1920.avif 1920w"
+                    sizes="(max-width: 576px) 90vw, (max-width: 992px) 50vw, 470px">
+                  <source type="image/webp"
+                    srcset="./assets/img/spectacle/cabaret-480.webp 480w,
+                            ./assets/img/spectacle/cabaret-800.webp 800w,
+                            ./assets/img/spectacle/cabaret-1200.webp 1200w,
+                            ./assets/img/spectacle/cabaret-1920.webp 1920w"
+                    sizes="(max-width: 576px) 90vw, (max-width: 992px) 50vw, 470px">
+                  <img src="./assets/img/spectacle/cabaret.jpg" alt="Cabaret"
+                       width="7360" height="4912" loading="lazy" decoding="async">
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="banc" role="tabpanel" aria-labelledby="banc-tab">
+            <div class="row align-items-center">
+              <div class="order-2 col-lg-5 col-sm-6 order-sm-1 me-auto">
+                <h3 class="mb-3 h2 mb-md-4">Un banc, 4 lieux, 6 comédiens</h3>
+                <p class="mb-0">Inspirés par les univers donnés par le public, par un regard, un geste, une musique, les comédiens donneront naissance à des personnages réalistes ou décalés
+                et des rencontres tout en poésie, en humour et en musique.</p>
+              </div>
+              <div class="order-1 pb-2 mb-4 col-sm-6 order-sm-2 mb-sm-0 pb-sm-0">
+                <picture>
+                  <source type="image/avif" srcset="./assets/img/spectacle/banc.avif">
+                  <source type="image/webp" srcset="./assets/img/spectacle/banc.webp">
+                  <img src="./assets/img/spectacle/banc.webp" alt="Le Banc"
+                       width="1080" height="1080" loading="lazy" decoding="async">
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="a4" role="tabpanel" aria-labelledby="a4-tab">
+            <div class="row align-items-center">
+              <div class="order-2 col-lg-5 col-sm-6 order-sm-1 me-auto">
+                <h3  class="mb-3 h2 mb-md-4">4 comédiens, 4 improvisations de 20 minutes</h3>
+                <p class="mb-0">Le point de départ est une phrase extraite d’un livre. Ce format révèle toute la créativité et la complicité des comédiens. Le A4 (concept créé par la LIPho, merci !)
+                est un spectacle d’improvisation théâtrale de type "middle form" comme on l’appelle dans notre jargon.</p>
+                <a href="https://www.improteine.fr/spectacles/" class="nav-link"><span class="text-muted">En collaboration avec Improtéine</span></a>
+              </div>
+              <div class="order-1 pb-2 mb-4 col-sm-6 order-sm-2 mb-sm-0 pb-sm-0">
+                <picture>
+                  <source type="image/avif" srcset="./assets/img/spectacle/a4.avif">
+                  <source type="image/webp" srcset="./assets/img/spectacle/a4.webp">
+                  <img src="./assets/img/spectacle/a4.webp" alt="A4"
+                       width="1080" height="1080" loading="lazy" decoding="async">
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="improvgames" role="tabpanel" aria-labelledby="improvgames-tab">
+            <div class="row align-items-center">
+              <div class="order-2 col-lg-5 col-sm-6 order-sm-1 me-auto">
+                <h3 class="mb-32 h2 mb-md-4">Boîtes de jeux et jeux improvisés</h3>
+                <p class="mb-0">Un cabaret dans lequel vous retrouverez des catégories directement inspirées des grands classiques des jeux de société.
+                Ceux qui ont bercé notre enfance, qui traînent dans le grenier ou qui continuent encore d'enflammer les dimanches en famille.
+                Les comédiens se feront un plaisir de se plier aux contraintes que le M.C. et vous, public, décideront de leur imposer.</p>
+              </div>
+              <div class="order-1 pb-2 mb-4 col-sm-6 order-sm-2 mb-sm-0 pb-sm-0">
+                <img src="./assets/img/spectacle/improvgames.svg" alt="Improv'Games" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Subscription -->
+      <section class="my-4 mt-lg-6 my-sm-5">
+        <div class="container py-5 position-relative">
+          <div class="top-0 rounded opacity-25 position-absolute start-0 w-100 h-100 bg-gradient"></div>
+          <div class="py-2 position-relative px-lg-5 px-sm-4 zindex-2">
+            <div class="row align-items-center">
+              <div class="pb-4 col-lg-3 offset-lg-1 col-md-4 mb-md-0 mb-sm-5">
+                <img class="mx-auto d-block mx-md-0" src="./assets/img/newsletter.svg" alt="Newsletter">
+              </div>
+              <div class="col-lg-6 offset-lg-1 col-md-8">
+
+                <!-- START - We recommend to place the below code where you want the form in your website html  -->
+                  <div id="sib-form-container" class="sib-form-container">
+                    <div id="error-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:540px;">
+                      <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                        <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                          <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+                        </svg>
+                        <span class="sib-form-message-panel__inner-text">
+                          Nous n&#039;avons pas pu confirmer votre inscription.
+                        </span>
+                      </div>
+                    </div>
+                    <div></div>
+                    <div id="success-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#085229; background-color:#e7faf0; border-radius:3px; border-color:#13ce66;max-width:540px;">
+                      <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                        <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                          <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+                        </svg>
+                        <span class="sib-form-message-panel__inner-text">
+                          Votre inscription est confirmée.
+                        </span>
+                      </div>
+                    </div>
+                    <div></div>
+                    <div id="sib-container" class="sib-container--large sib-container--horizontal" style="text-align:center; background-color:transparent; max-width:540px; border-radius:3px; border-width:0px; border-color:transparent; border-style:solid; direction:ltr">
+                      <form id="sib-form" method="POST" action="https://1cbba813.sibforms.com/serve/MUIEANvGXHQn5gOMQZ7426MsXmYgZQaODIjCj_4-S09Z0WP2VXqXemWsKFr0hHv0wDskKFxtjLGz12DE-yv_02Nge4HnopsYX09gZj5_QjrpS40Hi1MTIzTDT4hBxCfOJMwR3O2UyIDaacef0qikYFxLghCtj4DtTkcaW1G0CtxXQ5fGSupj7dbQTChTj8Sic-o4NQn_6xl2hshn" data-type="subscription">
+                        <div style="padding: 8px 0;">
+                          <div class="sib-form-block" style="font-size:29px; text-align:left; font-weight:700; font-family:&quot;Helvetica&quot;, sans-serif; color:#3C4858; background-color:transparent; text-align:left">
+                            <p>Abonnez-vous à notre newsletter!</p>
+                          </div>
+                        </div>
+                        <div style="padding: 8px 0;">
+                          <div class="sib-input sib-form-block">
+                            <div class="form__entry entry_block">
+                              <div class="form__label-row form__label-row--horizontal">
+
+                                <div class="entry__field">
+                                  <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="Votre email" data-required="true" required />
+                                </div>
+                              </div>
+
+                              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div style="padding: 8px 0;">
+                          <div class="sib-optin sib-form-block">
+                            <div class="form__entry entry_mcq">
+                              <div class="form__label-row form__label-row--horizontal">
+                                <div class="entry__choice" style="">
+                                  <label>
+                                    <input type="checkbox" class="input_replaced" value="1" id="OPT_IN" name="OPT_IN" />
+                                    <span class="checkbox checkbox_tick_positive"></span><span style="font-size:14px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#3C4858; background-color:transparent;"><p>J'accepte de recevoir des communications de la part des TouCont'Fé.</p></span> </label>
+                                </div>
+                              </div>
+                              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div style="padding: 8px 0;">
+                          <div class="sib-form-block" style="text-align: left">
+                            <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:16px; text-align:left; font-weight:700; font-family:&quot;Helvetica&quot;, sans-serif; color:#FFFFFF; background-color:#fe4235; border-radius:3px; border-width:0px;" form="sib-form" type="submit">
+                              <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
+                                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                              </svg>
+                              Inscription
+                            </button>
+                          </div>
+                        </div>
+
+                        <input type="text" name="email_address_check" value="" class="input--hidden">
+                        <input type="hidden" name="locale" value="en">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!-- END - We recommend to place the below code where you want the form in your website html  -->
+
+
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <!-- Parallax wrapper -->
+      <div class="pt-5 bg-secondary jarallax" data-jarallax data-speed="0.8">
+
+        <!-- Parallax image -->
+        <div class="jarallax-img" style="background-image: url(./assets/img/shapes/03-team-testimonials.svg);"></div>
+
+        <!-- Testimonials -->
+        <section class="container pt-5 pb-4 pb-lg-5">
+          <h3 class="mb-2 h6 text-uppercase text-sm-center"><a class="p-0 nav-link fw-normal" href="https://g.page/r/CQz10V7z7qPREAI/review">Témoignages</a></h3>
+          <h2 class="h1 mb-lg-5 pb-md-2 text-sm-center"><a class="p-0 nav-link fw-normal" href="https://g.page/r/CQz10V7z7qPREAI/review">Ce que vous pensez de nous, merci!</a></h2>
+
+          <!-- Carousel -->
+          <div class="pb-4 tns-carousel-wrapper tns-nav-outside tns-controls-outside">
+            <div class="tns-carousel-inner" data-carousel-options='{
+              "autoHeight": true,
+              "responsive": {
+                "0": {
+                  "controls": false
+                },
+                "768": {
+                  "controls": true
+                }
+              }
+            }'>
+
+              <!-- Carousel item -->
+              <div class="px-md-4">
+                <div class="border-0 blockquote-card card mb-md-4">
+                  <div class="pb-0 card-body mt-sm-4 mx-xl-5 mx-sm-4">
+                    <blockquote class="blockquote">
+                      <p class="lead">
+                      Hier ce sont Les Toucont'Fé qui ont enflammé la scène du théâtre avec « Improv’Games »
+                      Une soirée d’improvisations en tout genre sur le thème des jeux de société qui a fait l’unanimité auprès du public !</p>
+                    </blockquote>
+                  </div>
+                  <div class="pt-0 border-0 card-footer mb-sm-4 mx-xl-5 mx-sm-4 d-flex align-items-center">
+                    <div>
+                      <h3 class="mb-0 h6"><a href="https://www.facebook.com/story.php?story_fbid=pfbid0ipggkQeqXoMEXTPaRevLntkxncgxaiyDMvVfkUnz7LmVg5B8r3tgjAMnsWDUxhFXl&id=100066756709369">AnimaNice</a></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Carousel item -->
+              <div class="px-md-4">
+                <div class="border-0 blockquote-card card mb-md-4">
+                  <div class="pb-0 card-body mt-sm-4 mx-xl-5 mx-sm-4">
+                    <blockquote class="blockquote">
+                      <p class="lead">Vous avez réussi un exploit : faire rire une salle entière d'enseignants en fin d'année scolaire !
+                      Professionnels, dynamiques et incroyablement réactifs, vous avez embarqué tout le public dans vos improvisations avec une énergie communicative.
+                      Un vrai moment de convivialité qui a fait l'unanimité auprès de toute notre équipe. Si vous cherchez une troupe capable de transformer une soirée en excellent souvenir, foncez !</p>
+                    </blockquote>
+                  </div>
+                  <div class="pt-0 border-0 card-footer mb-sm-4 mx-xl-5 mx-sm-4 d-flex align-items-center">
+                    <div>
+                      <h3 class="mb-0 h6"><a href="https://maps.app.goo.gl/KcyYsWyQJthfthy4A">La Tramontane</a></h3>
+                      <a href="http://ndtramontane.com/" class="text-muted fs-sm">Groupe scolaire</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carousel item -->
+              <div class="px-md-4">
+                <div class="border-0 blockquote-card card mb-md-4">
+                  <div class="pb-0 card-body mt-sm-4 mx-xl-5 mx-sm-4">
+                    <blockquote class="blockquote">
+                      <p class="lead">Une troupe au top ! Créative et généreuse en rires et en formats. Mon préféré ? Les Improv' Games, où les jeux de société connus fixent les règles d'impro tout au long de la soirée.
+                      Je les suis depuis le début et la troupe s'est agrandie, mais sans jamais perdre cet amour du jeu et de l'humour !</p>
+                    </blockquote>
+                  </div>
+                  <div class="pt-0 border-0 card-footer mb-sm-4 mx-xl-5 mx-sm-4 d-flex align-items-center">
+                    <div>
+                      <h3 class="mb-0 h6"><a href="https://maps.app.goo.gl/9fQp819w6F3ARXUH7">Laura P.</a></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carousel item -->
+              <div class="px-md-4">
+                <div class="border-0 blockquote-card card mb-md-4">
+                  <div class="pb-0 card-body mt-sm-4 mx-xl-5 mx-sm-4">
+                    <blockquote class="blockquote">
+                      <p class="lead">En match d'impro, je vous ai adoré car c'était drôle et pétillant.
+                      En Banc, j'ai été ému par l'histoire. C'est incroyable comme une histoire profonde peut surgir à partir de rien. Merci pour tout !</p>
+                    </blockquote>
+                  </div>
+                  <div class="pt-0 border-0 card-footer mb-sm-4 mx-xl-5 mx-sm-4 d-flex align-items-center">
+                    <div>
+                      <h3 class="mb-0 h6"><a href="https://maps.app.goo.gl/b6kkQfxqDv2NSuK79">Yusuf Y.</a></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carousel item -->
+              <div class="px-md-4">
+                <div class="border-0 blockquote-card card mb-md-4">
+                  <div class="pb-0 card-body mt-sm-4 mx-xl-5 mx-sm-4">
+                    <blockquote class="blockquote">
+                      <p class="lead">J'ai été voir les comédiens des Toucont'Fé au Bouff'Scène pour un A4 : une super soirée et 4 comédiens extraordinaires.
+                      Merci pour cette belle première expérience !</p>
+                    </blockquote>
+                  </div>
+                  <div class="pt-0 border-0 card-footer mb-sm-4 mx-xl-5 mx-sm-4 d-flex align-items-center">
+                    <div>
+                      <h3 class="mb-0 h6"><a href="https://maps.app.goo.gl/mvKcTYMQFtUhUy81A">Guillaume S.</a></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carousel item -->
+              <div class="px-md-4">
+                <div class="border-0 blockquote-card card mb-md-4">
+                  <div class="pb-0 card-body mt-sm-4 mx-xl-5 mx-sm-4">
+                    <blockquote class="blockquote">
+                      <p class="lead">Du talent, de la bonne humeur, du génie qui ne se prend pas au sérieux ! Les spectacles des Toucont'Fé sont toujours des moments délicieux,
+                      pour les grands et pour les enfants aussi (7 et 9 ans). On adore et on en redemande !</p>
+                    </blockquote>
+                  </div>
+                  <div class="pt-0 border-0 card-footer mb-sm-4 mx-xl-5 mx-sm-4 d-flex align-items-center">
+                    <div>
+                      <h3 class="mb-0 h6"><a href="https://maps.app.goo.gl/zJdxLD25hPnz9RnV9">Patricia T.</a></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <h4 class="pt-3 mb-0 text-center h3 pt-sm-4">Vous aussi vous avez aimé?</h4>
+          <div class="pt-4 text-center">
+            <a href="https://g.page/r/CQz10V7z7qPREAI/review" class="btn btn-lg btn-gradient btn-hover-shadow d-sm-inline-block d-block mx-auto">Avis sur Google</a>
+            <a href="https://www.billetreduc.com/artiste/les-toucont-fe" class="mt-3 mt-sm-0 btn btn-lg btn-gradient btn-hover-shadow d-sm-inline-block d-block mx-auto ms-sm-4">Avis sur BilletRéduc</a>
+          </div>
+        </section>
+      </div> <!-- / Parallax wrapper -->
+
+            <!-- Events -->
+      <section id="calendar" class="py-4 py-lg-5 bg-faded-primary jarallax" data-jarallax data-speed="0.8">
+        <div class="jarallax-img" style="background-image: url(./assets/img/shapes/02-events.svg);"></div>
+        <div class="container py-4">
+          <h3 class="mb-2 h6 text-uppercase text-sm-center">prochains spectacles</h3>
+          <h2 class="h1 mb-lg-5 pb-md-2 text-sm-center">Où et Quand nous voir</h2>
+
+          <!-- Card horizontal -->
+          <div class="py-3 mb-4 border-0 card card-horizontal px-sm-5 py-sm-0">
+            <div class="flex-shrink-0 border-0 card-header my-sm-4 ms-sm-n2 py-sm-2 px-sm-0">
+              <div class="d-flex">
+                <span class="mb-0 display-4 text-primary" style="font-size: 3rem;">12</span>
+                <div class="ms-3 ps-1">
+                  <h6 class="mb-1 h5">Sept.</h6>
+                  <span class="text-muted">21:00</span>
+                </div>
+              </div>
+            </div>
+            <div class="py-0 card-body m-sm-4 py-sm-2 px-sm-3">
+              <h3 class="mb-2 h5 mb-sm-1">
+                <a href="https://bouffscene.fr/?page_id=966" class="nav-link">Catch d'improvisation</a>
+              </h3>
+              <a href="https://maps.app.goo.gl/7v5WaGEhVzTnJr9V9" class="nav-link"><span class="text-muted">Bouff'Scène, Nice</span></a>
+            </div>
+            <div class="flex-shrink-0 mt-5 border-0 card-footer my-sm-4 me-sm-n2 py-sm-2 px-sm-0">
+              <a href="https://www.billetreduc.com/spectacle/les-toucont-fe-dans-catch-d-impro-410521" class="btn btn-outline-primary btn-hover-shadow d-sm-inline-block d-block">Réserver</a>
+            </div>
+          </div>
+
+          <div class="py-3 mb-4 border-0 card card-horizontal px-sm-5 py-sm-0">
+            <div class="flex-shrink-0 border-0 card-header my-sm-4 ms-sm-n2 py-sm-2 px-sm-0">
+              <div class="d-flex">
+                <span class="mb-0 display-4 text-primary" style="font-size: 3rem;">31</span>
+                <div class="ms-3 ps-1">
+                  <h6 class="mb-1 h5">Oct.</h6>
+                  <span class="text-muted">20:30</span>
+                </div>
+              </div>
+            </div>
+            <div class="py-0 card-body m-sm-4 py-sm-2 px-sm-3">
+              <h3 class="mb-2 h5 mb-sm-1">
+                <a href="http://www.theatredelacite.fr/index.php" class="nav-link">Match d'improvisation</a>
+              </h3>
+              <a href="https://goo.gl/maps/oPFCCoi2HLSstZ6S9" class="nav-link"><span class="text-muted">Théâtre de la Cité, Nice</span></a>
+            </div>
+            <div class="flex-shrink-0 mt-5 border-0 card-footer my-sm-4 me-sm-n2 py-sm-2 px-sm-0">
+              <a href="#" class="btn btn-outline-primary btn-hover-shadow d-sm-inline-block d-block">Réserver</a>
+            </div>
+          </div>
+
+          <h4 class="pt-3 mb-0 text-center h3 pt-sm-4">
+            Vous en voulez plus?
+            <a href="calendrier.html" class="mt-4 btn btn-lg btn-gradient btn-hover-shadow d-sm-inline-block d-block mt-sm-0 ms-sm-4">Découvrir toutes nos dates</a>
+          </h4>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-4 footer pt-sm-5 bg-dark">
+      <div class="container py-3">
+        <div class="row">
+          <div class="order-1 mb-4 col-lg-3 col-md-4 col-sm-6 order-lg-1 mb-lg-0">
+            <p class="mb-3 opacity-60 mb-sm-4 pb-lg-3 fs-xs text-light">Improvisateurs niçois élevés sur les planches du théâtre de la Cité,
+            les Toucont'Fé vous accueillent pour des matches, cabarets et formats longs.</p>
+          </div>
+          <div class="order-1 mb-4 col-lg-2 col-sm-12 col-6 order-lg-2 order-sm-4 mb-lg-0">
+            <h3 class="pb-1 mb-2 h6 text-uppercase text-light">Navigation</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="mb-2 nav-item">
+                <a href="troupe.html" class="p-0 nav-link me-lg-0 me-sm-4 fw-normal">La Troupe</a>
+              </li>
+              <li class="mb-2 nav-item">
+                <a href="calendrier.html" class="p-0 nav-link me-lg-0 me-sm-4 fw-normal">Calendrier</a>
+              </li>
+              <li class="mb-2 nav-item">
+                <a href="contact.html" class="p-0 nav-link me-lg-0 me-sm-4 fw-normal">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="order-2 mb-4 col-lg-2 col-sm-12 col-6 order-lg-3 order-sm-5 mb-lg-0">
+            <h3 class="pb-1 mb-2 h6 text-uppercase text-light">Réseaux Sociaux</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="mb-2 nav-item">
+                <a href="https://www.facebook.com/toucontfe/" class="p-0 nav-link me-lg-0 me-sm-4 fw-normal">
+                  <i class="ci-facebook me-2"></i>
+                  Facebook
+                </a>
+              </li>
+              <li class="mb-2 nav-item">
+                <a href="https://www.instagram.com/toucontfe" class="p-0 nav-link me-lg-0 me-sm-4 fw-normal">
+                  <i class="ci-instagram me-2"></i>
+                  Instagram
+                </a>
+              </li>
+              <li class="mb-2 nav-item">
+                <a href="https://www.youtube.com/@Impro-TouContFe" class="p-0 nav-link me-lg-0 me-sm-4 fw-normal">
+                  <i class="ci-youtube me-2"></i>
+                  YouTube
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="order-3 mb-4 col-lg-2 col-md-4 order-lg-4 order-sm-3 mb-md-0">
+            <h3 class="pb-1 mb-2 h6 text-uppercase text-light">Contact</h3>
+            <ul class="nav nav-light flex-md-column flex-sm-row flex-column">
+              <li class="mb-2 nav-item">
+                <a href="tel:0613254799" class="p-0 nav-link me-md-0 me-sm-4 fw-normal text-nowrap">
+                  <i class="ci-iphone me-2"></i>
+                  06 13 25 47 99
+                </a>
+              </li>
+              <li class="mb-2 nav-item">
+                <a href="mailto:contact@toucontfe.fr" class="p-0 nav-link me-md-0 me-sm-4 fw-normal text-nowrap">
+                  <i class="ci-chat me-2"></i>
+                  contact@toucontfe.fr
+                </a>
+              </li>
+              <li class="mb-2 nav-item">
+                <a href="https://g.page/r/CQz10V7z7qPREAI/review" class="p-0 nav-link me-md-0 me-sm-4 fw-normal text-nowrap">
+                  <i class="ci-star me-2"></i>
+                  Avis Google
+                </a>
+              </li>
+              <li class="mb-2 nav-item">
+                <a href="https://www.billetreduc.com/artiste/les-toucont-fe" class="p-0 nav-link me-md-0 me-sm-4 fw-normal text-nowrap">
+                  <i class="ci-star me-2"></i>
+                  Avis BilletRéduc
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="order-4 mb-4 col-lg-3 col-md-4 col-sm-6 order-lg-5 order-sm-2 mb-sm-0">
+            <a href="https://www.facebook.com/toucontfe/" class="mb-2 btn-social me-1 mt-md-0 mt-sm-1">
+              <i class="ci-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/toucontfe/" class="mb-2 btn-social me-1 mt-md-0 mt-sm-1">
+              <i class="ci-instagram"></i>
+            </a>
+            <a href="https://goo.gl/maps/i6fcF95k4dDU9dVL8" class="mb-1 btn-social mt-md-0 mt-sm-1">
+              <i class="ci-google"></i>
+            </a>
+            <a href="https://www.youtube.com/@Impro-TouContFe" class="mb-1 btn-social mt-md-0 mt-sm-1">
+              <i class="ci-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="container py-2">
+          <div class="py-1 d-flex align-items-sm-center justify-content-between">
+            <div class="fs-xs text-light">
+              <span class="mb-1 d-sm-inline d-block">
+                <span class="fs-sm">&copy; </span>
+                Tous droits réservés.
+              </span>
+            </div>
+            <div class="d-flex align-items-sm-center">
+              <span class="mb-1 d-sm-inline-block d-none text-light fs-sm me-3 align-vertical">Retour</span>
+              <a class="rounded btn-scroll-top position-static" href="#top" data-scroll>
+                <i class="btn-scroll-top-icon ci-angle-up"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- START - We recommend to place the below code in footer or bottom of your website html  -->
+    <!-- Sendinblue Form -->
+    <script>
+      window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+      window.LOCALE = 'en';
+      window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Les informations que vous avez fournies ne sont pas valides. Veuillez vérifier le format du champ et réessayer.";
+      window.REQUIRED_ERROR_MESSAGE = "Vous devez renseigner ce champ. ";
+      window.GENERIC_INVALID_MESSAGE = "Les informations que vous avez fournies ne sont pas valides. Veuillez vérifier le format du champ et réessayer.";
+
+      window.translation = {
+        common: {
+          selectedList: '{quantity} list selected',
+          selectedLists: '{quantity} lists selected'
+        }
+      };
+
+      var AUTOHIDE = Boolean(1);
+    </script>
+    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+    <!-- END - We recommend to place the above code in footer or bottom of your website html  -->
+    <!-- End Sendinblue Form -->
+
+  </body>
+</html>
