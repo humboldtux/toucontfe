@@ -46,7 +46,6 @@
     <!-- Vendor scripts + main theme script: deferred, order preserved (bootstrap -> vendors -> theme.min.js) -->
     <script defer src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="./assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-    <script defer src="./assets/vendor/mixitup/dist/mixitup.min.js"></script>
     <script defer src="./assets/js/theme.min.js"></script>
 
     <!-- Demo Specific Styles -->
@@ -284,14 +283,13 @@
         style="background-image: url(./assets/img/shapes/shape.svg)"
       >
         <div class="container py-2">
-          <!-- Filterable grid container. IMPORTANT: it should wrap filters/sorters and target grid of items in order for plugin to work! -->
-          <div data-filter-grid>
+          <div>
             <h3 class="mb-2 text-center h6 text-uppercase">Notre Troupe</h3>
             <h2 class="text-center h1 mb-lg-5 pb-md-2">
               Découvrez nos membres!
             </h2>
 
-            <!-- Filterable grid of items -->
+            <!-- Grid of items -->
             <div class="row">
               <!-- Item -->
               <div

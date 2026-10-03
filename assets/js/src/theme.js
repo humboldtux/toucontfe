@@ -28,7 +28,6 @@ import priceSwitch from './components/price-switch';
 import videoPopup from './components/video-popup';
 import dataFilter from './components/data-filter';
 import rangeSlider from './components/range-slider';
-import filterSort from './components/filter-sorting';
 import bindedContent from './components/binded-content';
 import filtersShowHide from './components/show-hide-filters';
 import labelUpdate from './components/label-update';
